@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>
+Login Page
+</title>
+<html>
+<head>
+<title>
+Navy
+</title>
+<script language="javascript">
+function validate()
+{
+      var id1=document.frm.id.value;
+                                                                if(id1=="" || id1==null)
+				{
+ 					alert("Please enter Id");
+  					return false;
+  				}
+
+                                                                var fn1 = /^([A-Za-z0-9\-\_])/;
+				if (fn1.test(id1) == false){
+                alert("Please enter a valid id");
+                return (false);}
+
+   //check password
+				var pd=document.frm.pass.value;
+				if (pd==null || pd==""){
+ 					alert("Please enter a password");
+  					return false;
+  				}
+				if (pd.length<5){
+ 					alert("Password cannot be less than 5 digits");
+  					return false;}
+
+				if(id1 == "admin" && pd == "password")
+      {
+        window.open('homepage.html')
+      }
+     else
+     {
+       alert("Incorrect Password or Username")
+      } 
+}
+
+</script>
+</head>
+
+<body background="H:\Indian Navy Website\Images\new.jpg">
+<form name="frm" onSubmit="return validate();" action=''homepage.html" method="post">
+<div align =center>
+<pre>
+
+
+
+</pre>
+<H1>Please Login</H1>
+<table border="1" cellspacing="0">
+<tr>
+<td><b>Login Id: </b> </td>
+<td><input type="text" name="id"></td>
+</tr>	
+<tr>
+<td><b>Login Password: </b> </td>
+<td><input type="text" name="pass"></td>
+</tr>
+
+</table>
+<br>
+<table>
+<tr>
+<td><input type =submit value="Submit" style="height:25px;width:100px"></td> 
+</tr>
+</table>
+
+<br>
+
+<table>
+<tr>
+<td><a href="newuser.html"><font color="red" size="4">Click Here to Sign Up</font></a></td>
+</tr>
+</table>
+
+</div>
+</body>
